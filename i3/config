@@ -217,5 +217,4 @@ gaps outer 10
 exec_always --no-startup-id wal -i ~/Background/0021_3840x2160.jpg
 exec_always --no-startup-id "sleep 1; ~/.config/polybar/launch.sh"
 exec_always --no-startup-id $HOME/.config/i3/scripts/screens.sh
-exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
 exec_always --no-startup-id nm-applet
