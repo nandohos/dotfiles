@@ -3,4 +3,7 @@ if status is-interactive
 	#cat ~/.cache/wal/sequences &
 	neofetch
 	starship init fish | source
+        fish_ssh_agent	
+    #alias
+	alias nv="nvim"
 end

@@ -1,0 +1,15 @@
+//@theme "/usr/share/rofi/themes/Adapta-Nokto.rasi"
+configuration {
+  show-icons:         true;
+}
+
+@theme "/usr/share/rofi/themes/purple.rasi"
+//@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+/* window { */
+/* transparency: "real"; */
+/* fullscreen: true; */
+/* border: 0; */
+/* padding: 250; */
+/* background-color: rgba (126, 103, 148, 0.4); */
+/* //background-color: rgba (1, 1, 1, 0.3); */
+/* } */
