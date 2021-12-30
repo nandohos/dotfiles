@@ -219,8 +219,9 @@ gaps inner 15
 gaps outer 10
 
 
+
 #exec_always --no-startup-id wal -i Background/0049_3440x1440.png
-exec_always --no-startup-id wal -i Background/0025_2560x1440.png 
+exec_always --no-startup-id wal --backend colorz -i Background/0025_2560x1440.png
 #exec_always --no-startup-id feh --bg-scale $HOME/d/0051_3000x1349.jpg 
 exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
 exec_always --no-startup-id "sleep 1; ~/.config/polybar/launch.sh"
