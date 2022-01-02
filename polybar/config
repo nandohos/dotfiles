@@ -58,7 +58,7 @@ font-2 = Siji:pixelsize=10;1
 font-3 = FontAwesome5Free:size=10;1
 font-4 = FontAwesome5FreeSolid:size=10;1
 font-5 = JetBrainsMono Nerd Font:size=10;0
-
+font-6 = HackGen:size=10;0
 ;modules-left = bspwm i3
 modules-left = i3 xwindow
 ;modules-center = mpd spotify previous playpause next
@@ -289,38 +289,39 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/previous]
 type = custom/ipc
-format-font = 4
+format-font = 6
 ;Default
 hook-0 = echo ""
 ; When spotify active
-hook-1 = echo "Previous"
+hook-1 = echo "丹"
 click-left = "spotifyctl -q previous"
 
 
 [module/next]
 type = custom/ipc
-format-font = 4
+format-font = 6
 ; Default
 hook-0 = echo ""
 ; When spotify active
-hook-1 = echo "Next"
+hook-1 = echo ""
 click-left = "spotifyctl -q next"
 
 
 [module/playpause]
 type = custom/ipc
-format-font = 4
+format-font = 6
 ; Default
 hook-0 = echo ""
 ; Playing
-hook-1 = echo "Pause"
+hook-1 = echo "懶"
 ; Paused
-hook-2 = echo "Play"
+hook-2 = echo "懶"
 click-left = "spotifyctl -q playpause"
 
 
 [module/spotify]
 type = custom/ipc
+format-font = 7
 ; Default
 hook-0 = echo ""
 ; Playing/paused show song name and artist
