@@ -1,0 +1,25 @@
+[hostname]                                                                                                       
+ssh_only = false    
+format = "<[$hostname]($style)>"    
+trim_at = "-"    
+style = "bold dimmed white"    
+disabled = true    
+    
+[memory_usage]    
+format = "$symbol[${ram}( | ${swap})]($style) "    
+threshold = 70    
+style = "bold dimmed white"    
+disabled = false    
+    
+[package]    
+disabled = true    
+    
+[time]    
+time_format = "%T"    
+format = "$time($style) "    
+style = "bright-white"    
+disabled = false    
+    
+[username]    
+style_user = "bold dimmed blue"    
+show_always = true   
