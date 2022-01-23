@@ -194,17 +194,17 @@ bindsym $mod+r mode "resize"
 # from the generated scheme.
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
-
-# class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-
-client.background       $bg
+# set_from_resource $fg i3wm.color7 #f0f0f0
+# set_from_resource $bg i3wm.color2 #f0f0f0
+#
+# # class                 border  backgr. text indicator child_border
+# client.focused          $bg     $bg     $fg  $bg       $bg
+# client.focused_inactive $bg     $bg     $fg  $bg       $bg
+# client.unfocused        $bg     $bg     $fg  $bg       $bg
+# client.urgent           $bg     $bg     $fg  $bg       $bg
+# client.placeholder      $bg     $bg     $fg  $bg       $bg
+#
+# client.background       $bg
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -221,9 +221,9 @@ gaps outer 10
 
 
 #exec_always --no-startup-id wal -i Background/0049_3440x1440.png
-exec_always --no-startup-id wal --backend colorz -i Background/0025_2560x1440.png
-#exec_always --no-startup-id feh --bg-scale $HOME/d/0051_3000x1349.jpg 
+#exec_always --no-startup-id wal --backend colorz -i Background/0025_2560x1440.png
+exec_always --no-startup-id feh --bg-scale $HOME/Background/0025_2560x1440.png 
 exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
 exec_always --no-startup-id "sleep 2; ~/.config/polybar/launch.sh"
 exec_always --no-startup-id $HOME/.config/i3/scripts/screens.sh
-exec --no-startup-id "sleep 4; qbittorrent"
+exec --no-startup-id "sleep 5; qbittorrent"
