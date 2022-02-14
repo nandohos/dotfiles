@@ -26,4 +26,4 @@ show_always = true
 
 
 [git_status]
-disabled=true
+disabled=false
