@@ -30,3 +30,4 @@ SETUVAR fish_pager_color_completion:c0caf5
 SETUVAR fish_pager_color_description:565f89
 SETUVAR fish_pager_color_prefix:7dcfff
 SETUVAR fish_pager_color_progress:565f89
+SETUVAR fish_user_paths:/home/nando/\x2elocal/bin
