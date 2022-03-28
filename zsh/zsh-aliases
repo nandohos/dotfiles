@@ -21,6 +21,10 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias la='ls -la'
 
+# add named alias
+hash -d dotfiles=$HOME/Sources/dotfiles/
+hash -d dev=$HOME/Dev/
+
 # easier to read disk
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
