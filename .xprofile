@@ -1,0 +1,4 @@
+export ZDOTDIR=$HOME/.config/zsh
+xset r rate 210 40
+xrdb ~/.Xresources
+xset -b
