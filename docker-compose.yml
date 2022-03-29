@@ -1,0 +1,99 @@
+version: "1.0"
+services:
+  jackett:
+    image: lscr.io/linuxserver/jackett
+    container_name: jackett
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Europe/London
+    volumes:
+      - /home/nando/Services/jackett/config/:/config
+      - /home/nando/Services/jackett/downloads/:/downloads
+    ports:
+      - 9117:9117
+    network_mode: host    
+    restart: unless-stopped
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+    volumes:
+      - /home/nando/Services/jellyfin/config:/config
+      - /home/nando/Services/jellyfin/cache:/cache
+      - /home/nando/Media/media/:/data/media
+      - /home/nando/Media/:/data/
+      - /home/nando/Downloads/:/downloads
+    ports:
+      - 8096:8096
+      - 8920:8920
+    network_mode: host
+    restart: "unless-stopped"
+  sonarr:
+    container_name: sonarr
+    image: cr.hotio.dev/hotio/sonarr
+    ports:
+      - "8989:8989"
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
+    volumes:
+      - /home/nando/Services/sonarr/config/:/config
+      - /home/nando/Media:/data
+    restart: "unless-stopped"
+  radarr:
+    container_name: radarr
+    image: cr.hotio.dev/hotio/radarr:latest
+    restart: unless-stopped
+    network_mode: host
+    ports:
+      - 7878:7878
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
+    volumes:
+      - /home/nando/Services/radarr/config/:/config
+      - /home/nando/Media/:/data
+  bazarr:
+    container_name: bazarr
+    image: cr.hotio.dev/hotio/bazarr:latest
+    restart: unless-stopped
+    network_mode: host
+    ports:
+      - 6767:6767
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
+    volumes:
+      - /home/nando/Services/bazarr/config/:/config
+      - /home/nando/Media/media/:/data/media
+      - /home/nando/Media/:/data/
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - WEBUI_PORT=8080
+      - UMASK=002
+    volumes:
+      - /home/nando/Services/qbittorrent/config/:/config
+      - /home/nando/Media/torrents/:/data/torrents
+    ports:
+      - 6881:6881
+      - 6881:6881/udp
+      - 8080:8080
+      - 57620:57620
+    restart: unless-stopped
