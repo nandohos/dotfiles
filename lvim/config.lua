@@ -7,7 +7,7 @@ a global executable or a path to
 an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
-vim.opt.shell = "/bin/sh"
+vim.opt.shell = "/usr/bin/zsh"
 vim.opt.hlsearch = false -- highlight all matches on previous search pattern
 -- general
 lvim.log.level = "warn"
@@ -21,9 +21,10 @@ lvim.leader = "space"
 -- lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode = {
    -- Navigate buffers
-   ["<Tab>"] = ":BufferNext<CR>",
-   ["<S-Tab>"] = ":BufferPrevious<CR>",
+   ["<Tab>"] = ":BufferLineCycleNext<cr>",
+   ["<S-Tab>"] = ":BufferLineCyclePrev<cr>",
    ["<C-s>"] = ":w<cr>",
+   ["<C-c>"] = ":GoCoverageToggle<cr>",
    ["<C-a>"] = ":%y+<cr>",
 }
 -- unmap a default keymapping
@@ -67,8 +68,8 @@ lvim.builtin.which_key.mappings["f"] = {
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.dashboard.active = true
-lvim.builtin.notify.active = true
+-- lvim.builtin.dashboard.active = true
+-- lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 1
