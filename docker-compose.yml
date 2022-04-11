@@ -22,6 +22,8 @@ services:
       - PUID=1000
       - PGID=1000
       - UMASK=002
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - NVIDIA_VISIBLE_DEVICES=all
     volumes:
       - /home/nando/Services/jellyfin/config:/config
       - /home/nando/Services/jellyfin/cache:/cache
@@ -33,6 +35,11 @@ services:
       - 8920:8920
     network_mode: host
     restart: "unless-stopped"
+    deploy:
+     resources:
+      reservations:
+        devices:
+        - capabilities: [gpu]
   sonarr:
     container_name: sonarr
     image: cr.hotio.dev/hotio/sonarr
