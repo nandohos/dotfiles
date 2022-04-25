@@ -15,11 +15,11 @@ alias fgrep='fgrep --color=auto'
 
 # confirm before overwriting something
 
-alias ls='ls --color=auto'
+alias ls='exa'
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
-alias la='ls -la'
+alias la='exa -larg --git --color-scale'
 
 # add named alias
 hash -d dotfiles=$HOME/Sources/dotfiles/

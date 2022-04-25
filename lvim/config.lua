@@ -7,6 +7,7 @@ a global executable or a path to
 an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
+local utils = {}
 vim.opt.shell = "/usr/bin/zsh"
 vim.opt.hlsearch = false -- highlight all matches on previous search pattern
 -- general
@@ -104,6 +105,9 @@ vim.list_extend(lvim.lsp.override, { "pyright" })
 -- ---@usage setup a server -- see: https://www.lunarvim.org/languages/#overriding-the-default-configuration
 local opts = {} -- check the lspconfig documentation for a list of all possible options
 require("lvim.lsp.manager").setup("pylsp", opts)
+--require'lspconfig'.tailwindcss.setup{}
+--vim.list_extend(lvim.lsp.override,{"tailwindcss"}) -- WARNING:
+--require("lvim.lsp.manager").setup("tailwindcss",{}) -- WARNING:
 
 -- -- you can set a custom on_attach function that will be used for all the language servers
 -- -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
@@ -133,6 +137,7 @@ formatters.setup {
     --filetypes = { "typescript", "typescriptreact","lua" },
   },
 }
+
 
 -- -- set additional linters
 -- local linters = require "lvim.lsp.null-ls.linters"
@@ -180,7 +185,7 @@ lvim.plugins = {
       setup = function()
           vim.g.indentLine_enabled = 1
           vim.g.indent_blankline_char = "▏"
-          vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "dashboard" }
+          vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "dashboard","alpha" }
           vim.g.indent_blankline_buftype_exclude = { "terminal" }
           vim.g.indent_blankline_show_trailing_blankline_indent = false
           vim.g.indent_blankline_show_first_indent_level = false
@@ -237,11 +242,47 @@ lvim.plugins = {
     {
     "fatih/vim-go",
     filetypes={"go","gomod","gotmpl"}
-    }
+    },
+    {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
+    },
 }
+
 -- lvim.builtin.lualine.style = "default" -- or "none"
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
 --   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
 -- }
 -- }
+utils.is_in_package_json = function(field)
+  if vim.fn.filereadable(vim.fn.getcwd() .. "/package.json") ~= 0 then
+    local package_json = vim.fn.json_decode(vim.fn.readfile "package.json")
+    if package_json[field] ~= nil then
+      return true
+    end
+    local dev_dependencies = package_json["devDependencies"]
+    if dev_dependencies ~= nil and dev_dependencies[field] ~= nil then
+      return true
+    end
+    local dependencies = package_json["dependencies"]
+    if dependencies ~= nil and dependencies[field] ~= nil then
+      return true
+    end
+  end
+  return false
+end
+
+
+local project_has_tailwindcss_dependency = function()
+  return (vim.fn.glob "tailwind*" ~= "" or utils.is_in_package_json "tailwindcss")
+end
+
+if project_has_tailwindcss_dependency() == true then
+  require("lvim.lsp.manager").setup "tailwindcss"
+end
+
+

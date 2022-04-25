@@ -83,18 +83,24 @@ _G.packer_plugins = {
     url = "https://github.com/antoinemadec/FixCursorHold.nvim"
   },
   LuaSnip = {
-    config = { "\27LJ\2\nM\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\14lazy_load luasnip/loaders/from_vscode\frequire\0" },
+    config = { "\27LJ\2\nú\2\0\0\r\0\17\1&6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\1\3\1B\1\1\0016\1\0\0'\3\4\0B\1\2\0029\1\3\0015\3\14\0004\4\3\0009\5\5\0006\a\6\0B\a\1\2'\b\a\0B\5\3\2>\5\1\0049\5\5\0006\a\b\0B\a\1\2'\b\t\0'\t\n\0'\n\v\0'\v\f\0'\f\r\0B\5\a\0?\5\0\0=\4\15\3B\1\2\0016\1\0\0'\3\16\0B\1\2\0029\1\3\1B\1\1\1K\0\1\0\"luasnip.loaders.from_snipmate\npaths\1\0\0\22friendly-snippets\nstart\vpacker\tpack\tsite\20get_runtime_dir\rsnippets\19get_config_dir\15join_paths luasnip.loaders.from_vscode\14lazy_load\29luasnip.loaders.from_lua\15lvim.utils\frequire\5€€À™\4\0" },
     loaded = true,
     path = "/home/nando/.local/share/lunarvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["barbar.nvim"] = {
+  ["alpha-nvim"] = {
+    config = { "\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20lvim.core.alpha\frequire\0" },
+    loaded = true,
+    path = "/home/nando/.local/share/lunarvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
+  ["bufferline.nvim"] = {
     config = { "\27LJ\2\nB\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\25lvim.core.bufferline\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/nando/.local/share/lunarvim/site/pack/packer/opt/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
+    path = "/home/nando/.local/share/lunarvim/site/pack/packer/opt/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -120,14 +126,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nando/.local/share/lunarvim/site/pack/packer/start/colorschemes",
     url = "https://github.com/lunarvim/colorschemes"
-  },
-  ["dashboard-nvim"] = {
-    config = { "\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lvim.core.dashboard\frequire\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/nando/.local/share/lunarvim/site/pack/packer/opt/dashboard-nvim",
-    url = "https://github.com/ChristianChiarulli/dashboard-nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -183,7 +181,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["neoscroll.nvim"] = {
-    config = { "\27LJ\2\nî\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\rmappings\1\0\6\20easing_function\rcircular\25cursor_scrolls_alone\2\22respect_scrolloff\1\24use_local_scrolloff\1\rstop_eof\2\16hide_cursor\2\1\n\0\0\n<C-u>\n<C-d>\n<C-b>\n<C-f>\n<C-y>\n<C-e>\azt\azz\azb\nsetup\14neoscroll\frequire\0" },
+    config = { "\27LJ\2\nî\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\rmappings\1\0\6\24use_local_scrolloff\1\rstop_eof\2\16hide_cursor\2\20easing_function\rcircular\25cursor_scrolls_alone\2\22respect_scrolloff\1\1\n\0\0\n<C-u>\n<C-d>\n<C-b>\n<C-f>\n<C-y>\n<C-e>\azt\azz\azb\nsetup\14neoscroll\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -237,14 +235,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nando/.local/share/lunarvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-notify"] = {
-    config = { "\27LJ\2\n>\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\21lvim.core.notify\frequire\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/nando/.local/share/lunarvim/site/pack/packer/opt/nvim-notify",
-    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-tree.lua"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\23lvim.core.nvimtree\frequire\0" },
@@ -304,6 +294,11 @@ _G.packer_plugins = {
     path = "/home/nando/.local/share/lunarvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
+  ["schemastore.nvim"] = {
+    loaded = true,
+    path = "/home/nando/.local/share/lunarvim/site/pack/packer/start/schemastore.nvim",
+    url = "https://github.com/b0o/schemastore.nvim"
+  },
   ["structlog.nvim"] = {
     loaded = true,
     path = "/home/nando/.local/share/lunarvim/site/pack/packer/start/structlog.nvim",
@@ -319,6 +314,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nando/.local/share/lunarvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    config = { "\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18todo-comments\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/nando/.local/share/lunarvim/site/pack/packer/opt/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
   },
   ["toggleterm.nvim"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\23lvim.core.terminal\frequire\0" },
@@ -394,16 +397,36 @@ end
 
 -- Setup for: indent-blankline.nvim
 time([[Setup for indent-blankline.nvim]], true)
-try_loadstring("\27LJ\2\nã\2\0\0\2\0\v\0\0256\0\0\0009\0\1\0)\1\1\0=\1\2\0006\0\0\0009\0\1\0'\1\4\0=\1\3\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0006\0\0\0009\0\1\0005\1\b\0=\1\a\0006\0\0\0009\0\1\0+\1\1\0=\1\t\0006\0\0\0009\0\1\0+\1\1\0=\1\n\0K\0\1\0-indent_blankline_show_first_indent_level4indent_blankline_show_trailing_blankline_indent\1\2\0\0\rterminal%indent_blankline_buftype_exclude\1\4\0\0\thelp\rterminal\14dashboard&indent_blankline_filetype_exclude\bâ–\26indent_blankline_char\23indentLine_enabled\6g\bvim\0", "setup", "indent-blankline.nvim")
+try_loadstring("\27LJ\2\né\2\0\0\2\0\v\0\0256\0\0\0009\0\1\0)\1\1\0=\1\2\0006\0\0\0009\0\1\0'\1\4\0=\1\3\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0006\0\0\0009\0\1\0005\1\b\0=\1\a\0006\0\0\0009\0\1\0+\1\1\0=\1\t\0006\0\0\0009\0\1\0+\1\1\0=\1\n\0K\0\1\0-indent_blankline_show_first_indent_level4indent_blankline_show_trailing_blankline_indent\1\2\0\0\rterminal%indent_blankline_buftype_exclude\1\5\0\0\thelp\rterminal\14dashboard\nalpha&indent_blankline_filetype_exclude\bâ–\26indent_blankline_char\23indentLine_enabled\6g\bvim\0", "setup", "indent-blankline.nvim")
 time([[Setup for indent-blankline.nvim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\22lvim.core.lualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\25lvim.core.treesitter\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\23lvim.core.nvimtree\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lvim.core.autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\n`\0\0\3\0\6\0\v6\0\0\0009\0\1\0009\0\2\0\15\0\0\0X\1\5€6\0\3\0'\2\4\0B\0\2\0029\0\5\0B\0\1\1K\0\1\0\nsetup\18lvim.core.cmp\frequire\bcmp\fbuiltin\tlvim\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20lvim.core.alpha\frequire\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lvim.core.telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\22lvim.core.lualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 try_loadstring("\27LJ\2\n|\0\0\4\0\5\0\b6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0B\0\3\1K\0\1\0\1\0\a\bcss\2\vcss_fn\2\vhsl_fn\2\vrgb_fn\2\rRRGGBBAA\2\vRRGGBB\2\bRGB\2\1\2\0\0\6*\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
@@ -412,35 +435,19 @@ time([[Config for nvim-colorizer.lua]], false)
 time([[Config for project.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\22lvim.core.project\frequire\0", "config", "project.nvim")
 time([[Config for project.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lvim.core.autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lvim.core.telescope\frequire\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\25lvim.core.treesitter\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-try_loadstring("\27LJ\2\n`\0\0\3\0\6\0\v6\0\0\0009\0\1\0009\0\2\0\15\0\0\0X\1\5€6\0\3\0'\2\4\0B\0\2\0029\0\5\0B\0\1\1K\0\1\0\nsetup\18lvim.core.cmp\frequire\bcmp\fbuiltin\tlvim\0", "config", "nvim-cmp")
-time([[Config for nvim-cmp]], false)
 -- Config for: LuaSnip
 time([[Config for LuaSnip]], true)
-try_loadstring("\27LJ\2\nM\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\14lazy_load luasnip/loaders/from_vscode\frequire\0", "config", "LuaSnip")
+try_loadstring("\27LJ\2\nú\2\0\0\r\0\17\1&6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\1\3\1B\1\1\0016\1\0\0'\3\4\0B\1\2\0029\1\3\0015\3\14\0004\4\3\0009\5\5\0006\a\6\0B\a\1\2'\b\a\0B\5\3\2>\5\1\0049\5\5\0006\a\b\0B\a\1\2'\b\t\0'\t\n\0'\n\v\0'\v\f\0'\f\r\0B\5\a\0?\5\0\0=\4\15\3B\1\2\0016\1\0\0'\3\16\0B\1\2\0029\1\3\1B\1\1\1K\0\1\0\"luasnip.loaders.from_snipmate\npaths\1\0\0\22friendly-snippets\nstart\vpacker\tpack\tsite\20get_runtime_dir\rsnippets\19get_config_dir\15join_paths luasnip.loaders.from_vscode\14lazy_load\29luasnip.loaders.from_lua\15lvim.utils\frequire\5€€À™\4\0", "config", "LuaSnip")
 time([[Config for LuaSnip]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufReadPost * ++once lua require("packer.load")({'nvim-ts-context-commentstring'}, { event = "BufReadPost *" }, _G.packer_plugins)]]
+vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'toggleterm.nvim', 'bufferline.nvim', 'which-key.nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au WinScrolled * ++once lua require("packer.load")({'neoscroll.nvim'}, { event = "WinScrolled *" }, _G.packer_plugins)]]
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'Comment.nvim', 'nvim-notify', 'gitsigns.nvim', 'indent-blankline.nvim', 'lsp_signature.nvim', 'lsp-colors.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
-vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'barbar.nvim', 'dashboard-nvim', 'which-key.nvim', 'toggleterm.nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufReadPost * ++once lua require("packer.load")({'nvim-ts-context-commentstring'}, { event = "BufReadPost *" }, _G.packer_plugins)]]
 vim.cmd [[au CursorMoved * ++once lua require("packer.load")({'vim-matchup'}, { event = "CursorMoved *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'indent-blankline.nvim', 'lsp-colors.nvim', 'lsp_signature.nvim', 'Comment.nvim', 'gitsigns.nvim', 'todo-comments.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
 vim.cmd [[au BufReadPre * ++once lua require("packer.load")({'persistence.nvim'}, { event = "BufReadPre *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
@@ -449,5 +456,6 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
+  error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end
