@@ -51,7 +51,7 @@ bindsym $mod+Return exec --no-startup-id kitty
 # kill focused window
 bindsym $mod+q kill
 
-bindsym Print exec --no-startup-id gnome-screenshot -i
+bindsym Print exec --no-startup-id "gnome-screenshot --interactive"
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
@@ -63,10 +63,10 @@ bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ccedilla focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+ccedilla focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -218,7 +218,7 @@ for_window [class=".*"] border pixel 3
 gaps inner 6
 gaps outer 4
 
-
+bindsym $mod+l exec --no-startup-id "sleep 1; xset dpms force standby"
 
 #exec_always --no-startup-id wal -i Background/0049_3440x1440.png
 #exec_always --no-startup-id wal --backend colorz -i Background/0025_2560x1440.png
