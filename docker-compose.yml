@@ -1,4 +1,4 @@
-version: "3.9"
+version: "2.16"
 services:
   jackett:
     image: lscr.io/linuxserver/jackett
