@@ -1,0 +1,198 @@
+* {
+    border: none;
+    border-radius: 0;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrainsMono NFM;
+    min-height: 20px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces {
+    margin-right: 8px;
+    border-radius: 10px;
+    transition: none;
+    background: #f7768e;
+}
+
+#workspaces button {
+    transition: none;
+    color: #15161E;
+    background: transparent;
+    padding: 5px;
+    font-size: 14px;
+}
+
+#workspaces button.persistent {
+    color: #c0caf5;
+    font-size: 12px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: inherit;
+    color: #383c4a;
+    background: #d598a3;
+}
+
+#workspaces button.active {
+    color: white;
+}
+
+#keyboard-state {
+    margin-right: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 10px;
+    transition: none;
+    color: #15161E;
+    background: #bb9af7;
+}
+
+#custom-pacman {
+    padding-left: 16px;
+    padding-right: 8px;
+    border-radius: 10px 10px 10px 10px;
+    transition: none;
+    color: #15161E;
+    background: #7dcfff;
+}
+
+#custom-mail {
+    margin-right: 8px;
+    padding-right: 16px;
+    border-radius: 0px 10px 10px 0px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#mode {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#clock {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px 0px 0px 10px;
+    transition: none;
+    color: #15161E;
+    background: #a9b1d6;
+}
+
+#custom-weather {
+    padding-right: 16px;
+    border-radius: 0px 10px 10px 0px;
+    transition: none;
+    color: #15161E;
+    background: #a9b1d6;
+}
+
+#pulseaudio {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #15161E;
+    background: #7aa2f7;
+}
+
+#pulseaudio.muted {
+    background-color: #414868;
+    color: #15161E;
+}
+
+#custom-mem {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #15161E;
+    background: #e0af68;
+}
+
+#temperature {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #15161E;
+    background: #9ece6a;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+#backlight {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#battery {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#battery.charging {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #ffbe61;
+    color: black;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#tray {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
