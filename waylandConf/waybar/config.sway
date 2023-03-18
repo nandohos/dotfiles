@@ -1,11 +1,11 @@
 {
-    "layer": "top", // Waybar at top layer
+    // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     // "height": 30, // Waybar height (to be removed for auto height)
-    "margin": "10 0 0 10",
+    "margin": "10 10 0 10",
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "keyboard-state", "custom/pacman"],
+    "modules-left": ["sway/workspaces", "sway/language", "keyboard-state", "custom/pacman", "sway/mode"],
     "modules-center": ["clock", "custom/weather"],
     "modules-right": ["pulseaudio", "temperature", "custom/mem", "tray"],
 
@@ -14,7 +14,7 @@
     //*  Modules configuration  *
     //***************************
 
-    "wlr/workspaces": {
+    "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "format": "<span font='12'>{name} <span font='14'>{icon}</span></span>",
@@ -34,13 +34,18 @@
             "default": ""
         }
     },
+    "sway/language": {
+    "format": "{} ",
+	"min-length": 5,
+	"tooltip": false
+    },
 
     "keyboard-state": {
         //"numlock": true,
         "capslock": true,
-        "format": " {name} {icon} ",
+        "format": "{name} {icon} ",
         "format-icons": {
-            "locked": "",
+            "locked": " ",
             "unlocked": ""
         },
     },
@@ -53,6 +58,10 @@
         "on-click": "kitty sh -c 'yay; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar", // update system
         "signal": 8,
         "tooltip": false,
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
     },
 
     "clock": {

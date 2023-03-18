@@ -1,8 +1,8 @@
 {
-    "layer": "top", // Waybar at top layer
+    // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     // "height": 30, // Waybar height (to be removed for auto height)
-    "margin": "10 0 0 10",
+    "margin": "10 10 0 10",
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces", "keyboard-state", "custom/pacman"],

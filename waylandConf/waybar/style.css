@@ -44,23 +44,15 @@ window#waybar.hidden {
     background: #d598a3;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     color: white;
-}
-
-#language {
-    padding-left: 16px;
-    padding-right: 8px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
-    color: #15161E;
-    background: #bb9af7;
 }
 
 #keyboard-state {
     margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 10px;
     transition: none;
     color: #15161E;
     background: #bb9af7;
