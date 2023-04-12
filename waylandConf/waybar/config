@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces", "keyboard-state", "custom/pacman"],
     "modules-center": ["clock", "custom/weather"],
-    "modules-right": ["pulseaudio", "temperature", "custom/mem", "tray"],
+    "modules-right": ["custom/waybar-mpris" ,"pulseaudio", "temperature", "custom/mem", "tray"],
 
 
     //***************************
@@ -17,6 +17,8 @@
     "wlr/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
+        "sort-by-number": true,
+        "on-click": "activate",
         "format": "<span font='12'>{name} <span font='14'>{icon}</span></span>",
         "format-icons": {
             "1": "",
@@ -33,6 +35,21 @@
             "focused": "",
             "default": ""
         }
+    },
+
+    "custom/waybar-mpris": {
+        "return-type": "json",
+        "exec": "waybar-mpris --position --autofocus --order 'SYMBOL:ARTIST:TITLE:POSITION'",
+        "on-click": "waybar-mpris --send toggle",
+        // This option will switch between players on right click.
+        "on-click-right": "waybar-mpris --send player-next",
+        // The options below will switch the selected player on scroll
+        // "on-scroll-up": "waybar-mpris --send player-next",
+        // "on-scroll-down": "waybar-mpris --send player-prev",
+        // The options below will go to next/previous track on scroll
+        // "on-scroll-up": "waybar-mpris --send next",
+        // "on-scroll-down": "waybar-mpris --send prev",
+        "escape": true,
     },
 
     "keyboard-state": {

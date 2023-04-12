@@ -102,6 +102,17 @@ window#waybar.hidden {
     background: #a9b1d6;
 }
 
+#custom-waybar-mpris {
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: 8px;
+    margin-left: 9px;
+    border-radius: 10px;
+    transition: none;
+    color: #15161E;
+    background: #7dcfff;
+}
+
 #pulseaudio {
     margin-right: 8px;
     padding-left: 16px;
