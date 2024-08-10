@@ -1,2 +1,2 @@
 # dotfiles
-New dots
+New dots .
